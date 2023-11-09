@@ -1,24 +1,96 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Header from "./Components/Header";
+import TechNews from "./Components/TechNews";
+import SportNews from "./Components/SportNews";
+import TravelNews from "./Components/TravelNews";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import ViewNews from "./Components/ViewNews";
+import SubHeader from "./Components/SubHeader";
+import LoginPage from "./Components/LoginPage";
+import SignUpPage from "./Components/SignUpPage";
+import EditUser from "./Components/EditUser";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Navbar />
+                <Header />
+                <TechNews />
+                <SportNews />
+                <TravelNews />
+              </>
+            }
+          />
+          <Route
+            path="/techNews"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="Technology News" />
+                <ViewNews title="technology" headerName="Technology News" />
+              </>
+            }
+          />
+          <Route
+            path="/sportNews"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="Sport News" />
+                <ViewNews title="sports" headerName="Sport News" />
+              </>
+            }
+          />
+          <Route
+            path="/travelNews"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="Travel News" />
+                <ViewNews title="travel" headerName="Travel News" />
+              </>
+            }
+          />
+          <Route
+            path="/login"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="Login" />
+                <LoginPage />
+              </>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="SignUp" />
+                <SignUpPage />
+              </>
+            }
+          />
+          <Route
+            path="/edituser"
+            element={
+              <>
+                <Navbar />
+                <SubHeader headerName="EditUser" />
+                <EditUser />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
