@@ -5,7 +5,7 @@
 The News App is a dynamic web application designed to deliver current news to users, with a focus on simplicity. Built with React, JavaScript, HTML, and CSS, this app incorporates basic CRUD (Create, Read, Update, Delete) operations, offering general news updates as well as some tailored news in tech, sports, and travel.
 
 ## Features
-- **General News**: Provides the latest news from various categories to all users.
+- **General News**: Provides the latest news from various categories to all active users.
 - **User Accounts**: Allows users to sign up and log in to access additional features.
 - **Private Menu**: Logged-in users can access a customized news feed with categories such as Tech, Travel, and Sports.
 - **User Profile Management**: Users can edit their profile information, including email, password, and name, and can delete their profiles.
